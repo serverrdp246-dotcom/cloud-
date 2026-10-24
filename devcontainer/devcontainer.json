@@ -1,0 +1,14 @@
+{
+  "name": "Ubuntu QEMU Android Studio",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "qemu",
+  "workspaceFolder": "/storage",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  }
+}
