@@ -4,8 +4,11 @@ services:
     container_name: qemu
     environment:
       BOOT: "ubuntu"
-      USERNAME: "bill"   # يمكنك تغيير اسم المستخدم
-      PASSWORD: "gates"  # يمكنك تغيير كلمة المرور
+      USERNAME: "bill"
+      PASSWORD: "gates"
+      RAM_SIZE: "8G"       # زيادتها إلى 8 جيجابايت كحد أدنى لتشغيل المحاكي بداخل أوبونتو
+      CPU_CORES: "4"       # تخصيص 4 أنوية
+      DISK_SIZE: "64G"     # توفير مساحة كافية لتثبيت أندرويد ستوديو والـ SDK
     devices:
       - /dev/kvm
       - /dev/net/tun
