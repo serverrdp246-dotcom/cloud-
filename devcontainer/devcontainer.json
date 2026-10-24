@@ -1,0 +1,32 @@
+{
+  "name": "Ubuntu 26.04 Cloud DevEnvironment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu26.04",
+
+  // تحديد المنافذ (Ports) التي تريد توجيهها والوصول إليها عبر المتصفح
+  "forwardPorts": [3000, 8080],
+
+  // أوامر تعمل تلقائياً بعد إنشاء الحاوية (Container)
+  "postCreateCommand": "echo 'بيئة التطوير جاهزة!' && uname -a",
+
+  // تخصيص إعدادات وإضافات محرر VS Code
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
+    }
+  },
+
+  // أدوات وبرمجيات إضافية تثبت تلقائياً (مثل Node.js أو Python أو Docker)
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  }
+}
